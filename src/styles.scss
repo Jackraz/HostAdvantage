@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:wght@1,300&display=swap');
+
+$primary: rgb(255, 255, 255);
+
+body {
+    margin: 0px;
+    font-family: 'Nunito', 'sans-serif';
+    font-size: 18px;
+
+}
+
+/* Style the top navigation bar */
+.container{
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Nunito', 'sans-serif';
+}
+
+header{
+    background: $primary;
+    padding: 1em 0;
+    box-shadow: 5px 5px 18px rgb(180, 180, 180);       
+    
+    a{
+        color: #8d8d8d;
+        text-decoration: none;
+    }
+
+    a.logo{
+        font-weight: bold;
+    }
+
+    fa-icon{
+        margin-left: 0.5em;
+    }
+
+    nav{
+        float: right;
+        ul{
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+
+            li a {
+                margin: 1em;
+                padding: 0.5em;
+                border-radius: 25px;
+                i {
+                    margin-left: 8px;
+                }
+                &:hover {
+                    background-color: darken($primary, 5%);
+                    transition: background-color 0.2s;
+                    }
+            }
+        }
+    }
+
+    .separator {
+        margin-top: -4px;
+        height: 30px;
+        border-left: solid 1px  #8d8d8d;
+    }
+}
+
+.header {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grad {
+    height: 600px;
+    width: 100%;
+    background-color: #1fc8db;
+    background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+    color: white;
+    opacity: 0.95;
+    box-shadow: 5px 5px 18px rgb(180, 180, 180);
+}
+
+.title {
+    margin: auto;  
+    text-align: center;
+}
