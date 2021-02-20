@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-home',
@@ -17,5 +19,9 @@ export class HomeComponent implements OnInit {
 
   countClick(){
     this.clickCounter += 1;
+  }
+
+  insertUser(){
+    return HttpClient.post('http://localhost:44328/api/WebApI/callBcknd', data);
   }
 }
