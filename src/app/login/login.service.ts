@@ -46,7 +46,7 @@ export class LoginService {
 
     // Add safe, URL encoded search parameter if there is a search term
     const options = term ?
-     { params: new HttpParams().set('name', term) } : {};
+     { params: new HttpParams().set('FullName', term) } : {};
 
     return this.http.get<User[]>(this.userUrl, options)
       .pipe(

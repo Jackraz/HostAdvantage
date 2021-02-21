@@ -1,5 +1,4 @@
-<p>login works!</p>
-<div>
+<div class="login-container">
     <input type="text" [(ngModel)]="userDetails.fullName" placeholder="fullName">
     <input type="text" [(ngModel)]="userDetails.userName" placeholder="userName">
     <button (click)="addUser()">Create User</button>
@@ -24,3 +23,24 @@
     </tbody>
 </table>
 </div>
+
+    <div class="login-card">
+      <div class="login-title">
+        <h1>Sign In</h1>
+      </div>
+  
+    <div class="login-form">
+        <div class="input-full-width">
+            <input type="text" placeholder="Username">
+        </div>
+
+        <div class="input-full-width">
+            <input type="{{passwordType}}" placeholder="Password">
+            <fa-icon [icon]="eyeSlash" (click)=togglePassword()></fa-icon>
+        </div> 
+        <div class="buttons">
+            <button class="sign-in">Sign in</button>
+            <button>Forgotten Password?</button>
+        </div>
+    </div>
+ 

@@ -2,6 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { User } from './user';
 import { LoginService } from './login.service';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEyeSlash } from '@fortawesome/free-regular-svg-icons';
+import { faEye } from '@fortawesome/free-regular-svg-icons';
+
 
 @Component({
   selector: 'app-login',
@@ -13,6 +17,9 @@ export class LoginComponent implements OnInit {
   @Input() userDetails = { fullName:'', userName:''}
   User: any = [];
 
+  eyeSlash = faEyeSlash;
+  passwordType = "password"
+
   constructor(
     public loginService: LoginService
   ) { }
@@ -21,6 +28,18 @@ export class LoginComponent implements OnInit {
     this.getUsers()
   }
 
+  togglePassword(){
+    if (this.passwordType == "password")
+    {
+      this.passwordType ="text";
+      this.eyeSlash = faEye;
+    }
+    else{
+      this.passwordType ="password";
+      this.eyeSlash = faEyeSlash;
+    }
+  }
+  
   getUsers(){
     return this.loginService.getUsers().subscribe((data: {}) =>{
       this.User = data;
