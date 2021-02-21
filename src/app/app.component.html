@@ -6,12 +6,13 @@
         <li><a href="#" routerLink="/Rent">Rent a server<fa-icon [icon]="bolt"></fa-icon></a></li>
         <li><a href="#" routerLink="/Dashboard">Dashboard<fa-icon [icon]="home"></fa-icon></a></li>
         <div class="separator"></div>
-        <li><a href="#" routerLink="/Login">Login<fa-icon [icon]="signin"></fa-icon></a></li>
+        <li *ngIf="signedin"><a href="#" routerLink="/Login">Welcome {{currentUser.userName}}<fa-icon [icon]="userIcon"></fa-icon></a></li>
+        <li *ngIf="!signedin"><a href="#" routerLink="/Login">Login<fa-icon [icon]="signin"></fa-icon></a></li>
       </ul>
     </nav>
   </div>  
 </header>
- 
+
 <div class="container">
   <router-outlet></router-outlet>
 </div>

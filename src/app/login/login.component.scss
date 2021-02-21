@@ -1,3 +1,5 @@
+$fontColor:rgb(78, 78, 78);
+
 .login-card{
     margin: 0  auto;
     margin-top: 100px;
@@ -9,7 +11,8 @@
         text-align: center;  
         border-radius: 6px 6px 0px 0px;  
         height: 250px;
-        background-image: linear-gradient( 68.2deg,  rgba(255,202,88,1) 0%, rgba(139,73,255,1) 100.2% );
+        background-color: #8EC5FC;
+        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
         vertical-align: middle;
         position: relative;
         h1{
@@ -40,14 +43,28 @@
             font-size: 32px;
             border: none;
             border-bottom: 2px solid grey;
-            color: rgb(78, 78, 78);
+            color: $fontColor;
             &:focus{
                 border: none;               
                 border-bottom: 1px solid;
             }
         }
+        input[type=checkbox]{
+            margin:0;
+            position: absolute;
+            top: 30%;
+            right: 10%;
+            font-size: 32px;
+            width: 10%;
+        }
+        label{
+            padding: 0.5em;
+            margin: 0.5em 1em;
+            color: gray;
+            font-size: 32px;
+        }
         fa-icon{
-            color: rgb(78, 78, 78);
+            color: $fontColor;
             font-size: 32px;
             position: absolute;
             top: 30%;
@@ -62,49 +79,57 @@
         button{
             margin: 2% 5%;
             height: 80px;
-            background-image: linear-gradient( 68.2deg,  rgba(255,202,88,1) 0%, rgba(139,73,255,1) 60.2% );
+            background-image:  linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
             color: white;
             border-radius: 10px;
             border:none;
             font-size: 1.1em;
-            transition: background-image 1s;
+            transition: box-shadow .1s ease-in, color .1s ease-in;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
             width: 60%;
             &:hover{
-                transition: background-color 1s;
-                transition: background-image 4s;
-                background-image: none;
-                background-color: lighten(rgb(131, 56, 243), 10%);
+                box-shadow: inset 0 0 0 1000px rgba(224, 195, 252,.9);   
+                color: $fontColor;
+                -webkit-transition: box-shadow .1s ease-in, color .1s ease-in;
+                -moz-transition: box-shadow .1s ease-in, color .1s ease-in;
+                -o-transition: box-shadow .1s ease-in, color .1s ease-in;
+                transition: box-shadow .1s ease-in, color .1s ease-in;
             }
         }
         button.login{
             margin: 2% 5%;
-            background-image: linear-gradient( 68.2deg,  rgba(255,202,88,1) 60%, rgba(139,73,255,1) 100.2% );
-            transition: background-image 1s;
+            background-image:  linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+            transition: box-shadow .1s ease-in, color .1s ease-in;
             width: 40%;
             &:hover{
-                transition: background-color 1s;
-                transition: background-image 4s;
-                background-image: none;
-                background-color: lighten(rgb(254,201,89), 10%);
-                color: grey;
-                
+                box-shadow: inset 0 0 0 1000px rgba(142, 197, 252,.9);
+                color: $fontColor;
+                -webkit-transition: box-shadow .1s ease-in, color .1s ease-in;
+                -moz-transition: box-shadow .1s ease-in, color .1s ease-in;
+                -o-transition: box-shadow .1s ease-in, color .1s ease-in;
+                transition: box-shadow .1s ease-in, color .1s ease-in;
             }
         }
     }
     .login{
         margin: 2% 5%;
         height: 80px;
-        background-image: linear-gradient( 68.2deg,  rgba(255,202,88,1) 0%, rgba(139,73,255,1) 60.2% );
+        background-image:  linear-gradient(62deg, #8EC5FC 0%, rgb(224, 195, 252) 100%);
         color: white;
         border-radius: 10px;
         border:none;
         font-size: 1.1em;
-        transition: background-image 1s;
-        &:hover{
-            transition: background-color 1s;
-            transition: background-image 4s;
-            background-image: none;
-            background-color: lighten(rgb(131, 56, 243), 10%);           
+        transition: box-shadow .1s ease-in, color .1s ease-in;
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+        &:hover{            
+            box-shadow: inset 0 0 0 1000px rgba(224, 195, 252,.9);      
+            color: $fontColor;
+            -webkit-transition: box-shadow .1s ease-in, color .1s ease-in;
+            -moz-transition: box-shadow .1s ease-in, color .1s ease-in;
+            -o-transition: box-shadow .1s ease-in, color .1s ease-in;
+            transition: box-shadow .1s ease-in, color .1s ease-in;
+
         }
     }
 }

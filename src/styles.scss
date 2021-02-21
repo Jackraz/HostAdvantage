@@ -8,10 +8,9 @@ body {
     margin: 0px;
     font-family: 'Nunito', 'sans-serif';
     font-size: 18px;
-    background-image: url("https://www.designbolts.com/wp-content/uploads/2013/02/Floral-Grey-Seamless-Pattern-For-Website-Background.jpg");
-    background-repeat: repeat;
-    background-blend-mode: luminosity;
-    background-color: white;
+    background: url("https://www.designbolts.com/wp-content/uploads/2013/02/Floral-Grey-Seamless-Pattern-For-Website-Background.jpg"), linear-gradient(to right, grey,grey);
+    background-repeat: repeat, repeat;
+    background-blend-mode: screen, normal;
 }
 
 //generic styles

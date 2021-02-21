@@ -2,6 +2,7 @@ export class User {
     id: string;
     FullName: string;
     UserName: string;
+    Password: string;
   }
   
   

@@ -9,6 +9,7 @@ import { UserService } from './user-management.service';
 })
 
 export class UserManagementComponent implements OnInit {
+  
   @Input() userDetails = { fullName:'', userName:''}
   User: any = [];
 

@@ -11,9 +11,13 @@
         <div class="input-full-width">
             <input type="{{passwordType}}" placeholder="Password">
             <fa-icon [icon]="eyeSlash" (click)=togglePassword()></fa-icon>
-        </div> 
+        </div>
+        <div class="input-full-width">
+            <label>Remember Me?</label>
+            <input type="checkbox">
+        </div>  
         <div class="buttons">
-            <button class="login">Login</button>
+            <button class="login" (click)=login()>Login</button>
             <button>Forgotten Password?</button>
         </div>
         <button class="login" (click)=signUpToggle()>Sign Up</button>
@@ -26,20 +30,20 @@
 
     <div class="login-form">
         <div class="input-full-width">
-            <input type="text" placeholder="Full Name">
+            <input type="text" [(ngModel)]="userDetails.fullName" placeholder="Full Name">
         </div>
 
         <div class="input-full-width">
-            <input type="text" placeholder="Username">
+            <input type="text" [(ngModel)]="userDetails.userName" placeholder="Username">
         </div>
 
         <div class="input-full-width">
-            <input type="{{passwordType}}" placeholder="Password">
+            <input type="{{passwordType}}" [(ngModel)]="userDetails.password" placeholder="Password">
             <fa-icon [icon]="eyeSlash" (click)=togglePassword()></fa-icon>
         </div> 
         <div class="buttons">
-            <button class="login">confirm</button>
-            <button>Forgotten Password?</button>
+            <button class="login" (click)=addUser()>Confirm</button>
+            <button routerLink="/UserManagementComponent">Forgotten Password?</button>
         </div>
         <button class="login" (click)=signUpToggle()>Back</button>
     </div>
