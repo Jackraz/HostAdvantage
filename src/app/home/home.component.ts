@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     this.clickCounter += 1;
   }
 
-  insertUser(){
-    return HttpClient.post('http://localhost:44328/api/WebApI/callBcknd', data);
-  }
+  //insertUser(){
+  //  return HttpClient.post('http://localhost:44328/api/WebApI/callBcknd', data);
+  //}
 }

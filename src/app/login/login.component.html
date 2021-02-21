@@ -1,1 +1,26 @@
 <p>login works!</p>
+<div>
+    <input type="text" [(ngModel)]="userDetails.fullName" placeholder="fullName">
+    <input type="text" [(ngModel)]="userDetails.userName" placeholder="userName">
+    <button (click)="addUser()">Create User</button>
+</div>
+<div class="play-container">
+<table>
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Username</th>
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of User">
+            <td><input type="text" [(ngModel)]="user.fullName"></td>
+            <td><input type="text" [(ngModel)]="user.userName"></td>
+            <td><span (click)="deleteUser(user.id)">Delete</span></td>
+            <td><span (click)="updateUser(user)">Update</span></td>
+        </tr>
+    </tbody>
+</table>
+</div>
