@@ -8,21 +8,35 @@ body {
     margin: 0px;
     font-family: 'Nunito', 'sans-serif';
     font-size: 18px;
-
+    background-image: url("https://www.designbolts.com/wp-content/uploads/2013/02/Floral-Grey-Seamless-Pattern-For-Website-Background.jpg");
+    background-repeat: repeat;
+    background-blend-mode: luminosity;
+    background-color: white;
 }
 
-/* Style the top navigation bar */
+//generic styles
 .container{
     width: 80%;
     margin: 0 auto;
     font-family: 'Nunito', 'sans-serif';
 }
 
+.card{
+    box-shadow: 5px 5px 18px rgb(180, 180, 180);
+    border-radius: 6px;
+    background-color: white;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+
+/* Style the top navigation bar */
 header{
     background: $primary;
     padding: 1em 0;
-    box-shadow: 5px 5px 18px rgb(180, 180, 180);       
-    
+    box-shadow: 5px 5px 18px rgb(180, 180, 180);
     a{
         color: #8d8d8d;
         text-decoration: none;

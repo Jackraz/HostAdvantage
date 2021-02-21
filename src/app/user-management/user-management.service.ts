@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
@@ -19,7 +20,7 @@ const httpOptions = {
   providedIn: "root"
 })
 
-export class LoginService {
+export class UserService {
   userUrl = 'http://localhost:56500/api/user';  // apiURL to web api
 
   constructor(private http: HttpClient){}

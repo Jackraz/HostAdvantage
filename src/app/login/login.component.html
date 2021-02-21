@@ -1,34 +1,8 @@
-<div class="login-container">
-    <input type="text" [(ngModel)]="userDetails.fullName" placeholder="fullName">
-    <input type="text" [(ngModel)]="userDetails.userName" placeholder="userName">
-    <button (click)="addUser()">Create User</button>
-</div>
-<div class="play-container">
-<table>
-    <thead>
-        <tr>
-            <th>Full Name</th>
-            <th>Username</th>
-            <th>Action</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let user of User">
-            <td><input type="text" [(ngModel)]="user.fullName"></td>
-            <td><input type="text" [(ngModel)]="user.userName"></td>
-            <td><span (click)="deleteUser(user.id)">Delete</span></td>
-            <td><span (click)="updateUser(user)">Update</span></td>
-        </tr>
-    </tbody>
-</table>
-</div>
+<div *ngIf="!signInToggle" class="login-card card">
+    <div class="login-title">
+        <h1>Login</h1>
+    </div>
 
-    <div class="login-card">
-      <div class="login-title">
-        <h1>Sign In</h1>
-      </div>
-  
     <div class="login-form">
         <div class="input-full-width">
             <input type="text" placeholder="Username">
@@ -39,8 +13,34 @@
             <fa-icon [icon]="eyeSlash" (click)=togglePassword()></fa-icon>
         </div> 
         <div class="buttons">
-            <button class="sign-in">Sign in</button>
+            <button class="login">Login</button>
             <button>Forgotten Password?</button>
         </div>
+        <button class="login" (click)=signUpToggle()>Sign Up</button>
     </div>
- 
+</div>  
+<div *ngIf="signInToggle" class="login-card card">
+    <div class="login-title">
+        <h1>Sign Up</h1>
+    </div>
+
+    <div class="login-form">
+        <div class="input-full-width">
+            <input type="text" placeholder="Full Name">
+        </div>
+
+        <div class="input-full-width">
+            <input type="text" placeholder="Username">
+        </div>
+
+        <div class="input-full-width">
+            <input type="{{passwordType}}" placeholder="Password">
+            <fa-icon [icon]="eyeSlash" (click)=togglePassword()></fa-icon>
+        </div> 
+        <div class="buttons">
+            <button class="login">confirm</button>
+            <button>Forgotten Password?</button>
+        </div>
+        <button class="login" (click)=signUpToggle()>Back</button>
+    </div>
+</div>  

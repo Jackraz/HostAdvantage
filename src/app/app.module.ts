@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RentComponent } from './rent/rent.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserManagementComponent } from './user-management/user-management.component';
 
 export class AngularMaterialModule { }
 
@@ -20,7 +21,8 @@ export class AngularMaterialModule { }
     HomeComponent,
     LoginComponent,
     RentComponent,
-    DashboardComponent
+    DashboardComponent,
+    UserManagementComponent
   ],
   imports: [
     BrowserModule,

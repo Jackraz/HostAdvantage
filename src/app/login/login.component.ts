@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { User } from './user';
 import { LoginService } from './login.service';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { faEyeSlash } from '@fortawesome/free-regular-svg-icons';
@@ -19,15 +18,18 @@ export class LoginComponent implements OnInit {
 
   eyeSlash = faEyeSlash;
   passwordType = "password"
+  signInToggle = false
+
 
   constructor(
     public loginService: LoginService
   ) { }
 
   ngOnInit(): void {
-    this.getUsers()
+    this.loginService.getUsers()
   }
 
+  //In Page Functions
   togglePassword(){
     if (this.passwordType == "password")
     {
@@ -39,30 +41,18 @@ export class LoginComponent implements OnInit {
       this.eyeSlash = faEyeSlash;
     }
   }
-  
-  getUsers(){
-    return this.loginService.getUsers().subscribe((data: {}) =>{
-      this.User = data;
-    })
-  }
 
+  signUpToggle(){
+    this.signInToggle = !this.signInToggle;
+  }
+  
+
+  // API Interactions //
   addUser(){
     this.loginService.addUser(this.userDetails).subscribe(data => {
       //this.id = data.id;
-      this.getUsers();
-    });
-  }
-  
-  deleteUser(id){
-    this.loginService.deleteUser(id).subscribe(data => {
-      this.getUsers();
+      this.loginService.getUsers();
     });
   }
 
-  updateUser(user){
-    this.loginService.updateUser(user.id, user).subscribe(data => {
-      console.log(user)
-      this.getUsers();
-    });
-  }
 }
