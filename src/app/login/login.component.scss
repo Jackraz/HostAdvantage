@@ -45,14 +45,17 @@ $fontColor:rgb(78, 78, 78);
             border-bottom: 2px solid grey;
             color: $fontColor;
             &:focus{
-                border: none;               
-                border-bottom: 1px solid;
+                outline: 0;
+                border-style: none;
+                border-bottom: 2px solid;
+                border-color:hsl(210, 95%, 77%);
             }
         }
         input[type=checkbox]{
             margin:0;
             position: absolute;
-            top: 30%;
+            top: 50%;
+            transform:translateY(-50%);
             right: 10%;
             font-size: 32px;
             width: 10%;
@@ -64,10 +67,12 @@ $fontColor:rgb(78, 78, 78);
             font-size: 32px;
         }
         fa-icon{
+            cursor: pointer;
             color: $fontColor;
             font-size: 32px;
             position: absolute;
-            top: 30%;
+            top: 50%;
+            transform:translateY(-50%);
             right: 10%;
         }
     }

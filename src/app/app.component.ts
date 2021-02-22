@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { faBolt } from '@fortawesome/free-solid-svg-icons';
 import { faServer } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
@@ -23,8 +24,7 @@ export class AppComponent {
 
   currentUser = new User();
 
-  constructor() {
-  }
+  constructor(public router: Router) {}
 
   ngOnInit(): void {
      
@@ -38,5 +38,6 @@ export class AppComponent {
   logoutUser(){
     this.currentUser = new User();
     this.signedin = false;
+    this.router.navigate(['Login']);
   }
 }
